@@ -1,0 +1,602 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 42.66667px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  html {
+    font-size: 54.93333px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 102.4px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id："162162" */
+  src: url("http://at.alicdn.com/t/font_51d0jc8yxdmquxr.eot");
+  src: url("http://at.alicdn.com/t/font_51d0jc8yxdmquxr.eot") format("embedded-opentype"), url("http://at.alicdn.com/t/font_51d0jc8yxdmquxr.woff") format("woff"), url("http://at.alicdn.com/t/font_51d0jc8yxdmquxr.ttf") format("truetype"), url("http://at.alicdn.com/t/font_51d0jc8yxdmquxr.svg#iconfont") format("svg");
+}
+
+.box {
+  background: url(../img/2.jpg) 0% 0%/cover;
+  position: fixed;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  z-index: -4;
+}
+
+.zhezhao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.head {
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.4rem;
+  font-family: "iconfont";
+}
+
+.head .xiala {
+  width: 10%;
+  margin-right: 0.3rem;
+}
+
+.head .xiala a {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url(../img/xiala.png);
+  background-size: cover;
+  z-index: 11111;
+}
+
+.head .musicname {
+  width: 75%;
+  height: 2.2rem;
+  float: left;
+  text-align: center;
+  margin-left: 0.3rem;
+}
+
+.head .musicname .name {
+  font-size: 30px;
+  color: #fff;
+}
+
+.head .musicname .author {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.head .musicname .author span {
+  font-size: 20px;
+  margin-right: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.head .musicname .author a {
+  font-size: 20px;
+}
+
+.head .musicname .style {
+  text-align: center;
+}
+
+.head .musicname .style a {
+  display: block;
+  float: left;
+  padding: 0 5px;
+  border: 2px solid #31C27C;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #31C27C;
+  margin-left: 18px;
+  letter-spacing: 0.2em;
+}
+
+.head .musicname .style .yx {
+  border: 2px solid #49453E;
+  color: #49453E;
+}
+
+.head .more {
+  float: right;
+  font-size: 30px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  background: url(../img/gengduo.png);
+  background-size: cover;
+}
+
+.head .morebox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: #E3E3E3;
+  z-index: 111;
+  display: none;
+}
+
+.head .morebox .li {
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.head .morebox .li .box-one {
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.head .morebox .li .box-one .box-top {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #fff;
+  border-radius: 10px;
+  padding-top: 0.3rem;
+  margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.2rem;
+  color: #42495A;
+}
+
+.head .morebox .li .box-one .box-top a {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: 0.3rem;
+  background: url(../img/tianjia.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .shengji a {
+  margin-left: 0.25rem;
+  background: url(../img/shengji.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .fenxiang a {
+  margin-left: 0.2rem;
+  background: url(../img/fenxiang2.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .shanchu a {
+  margin-left: 0.25rem;
+  background: url(../img/shanchu.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .geshou a {
+  margin-left: 0.25rem;
+  background: url(../img/geshou.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .zhuanji a {
+  margin-left: 0.3rem;
+  background: url(../img/zhuanji.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .danqu a {
+  margin-left: 0.25rem;
+  background: url(../img/danqu.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .bofang a {
+  margin-left: 0.25rem;
+  background: url(../img/MV.png);
+  background-size: cover;
+}
+
+.head .morebox .li .box-one .about {
+  font-size: 14px;
+  margin-top: 0.4rem;
+}
+
+.head .morebox .volume {
+  width: 100%;
+  height: 1.5rem;
+  border-bottom: 1px solid #CDCDCD;
+  padding: 0.5rem;
+}
+
+.head .morebox .volume .novolice {
+  float: left;
+  width: 15%;
+  height: 100%;
+  line-height: 0.5rem;
+  color: #272C3B;
+  font-size: 20px;
+}
+
+.head .morebox .volume .volice {
+  width: 60%;
+  height: 0.1rem;
+  background: #C5C5C5;
+  float: left;
+  line-height: 0.5rem;
+  position: relative;
+  margin-top: 0.2rem;
+}
+
+.head .morebox .volume .volice .cir {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #C5C5C5;
+  position: absolute;
+  left: -.2rem;
+  top: -.15rem;
+  z-index: 11;
+}
+
+.head .morebox .volume .volice .volice-duretion {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #272C3B;
+}
+
+.head .morebox .qx {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  font-family: "微软雅黑";
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pic {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background: url(../img/2.jpg);
+  background-size: cover;
+  animation: move 20s linear  infinite;
+}
+
+.lylic {
+  width: 100%;
+  height: 1.5rem;
+  margin-top: 0.6rem;
+}
+
+#console {
+  width: 100%;
+  height: 3rem;
+  padding: 0.4rem;
+  font-family: "iconfont";
+}
+
+#console .top {
+  width: 100%;
+  height: 1rem;
+  font-size: 16px;
+  color: #fff;
+}
+
+#console .top .time {
+  width: 15%;
+  line-height: 1rem;
+  float: left;
+}
+
+#console .top .duration {
+  width: 60%;
+  height: 0.1rem;
+  background: #8B8A89;
+  line-height: 1rem;
+  float: left;
+  margin-top: 0.4rem;
+  margin-left: 5%;
+  position: relative;
+}
+
+#console .top .duration .circle {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #31C47C;
+  border-radius: 50%;
+  position: absolute;
+  left: -.2rem;
+  top: -.15rem;
+}
+
+#console .top .endtime {
+  width: 15%;
+  line-height: 1rem;
+  float: right;
+}
+
+#console .bot {
+  width: 80%;
+  height: 1.3rem;
+  margin: 0 auto;
+}
+
+#console .bot div {
+  width: 33.33%;
+  float: left;
+  height: 100%;
+  color: #31C27C;
+  text-align: center;
+  line-height: 1.3rem;
+}
+
+#console .bot div a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+#console .bot .prev a {
+  background: url(../img/shang.png);
+  background-size: cover;
+  margin-top: 0.2rem;
+}
+
+#console .bot .play {
+  font-size: 60px;
+}
+
+#console .bot .play a {
+  width: 60px;
+  height: 60px;
+  background: url(../img/bofang.png);
+  background-size: cover;
+}
+
+#console .bot .next a {
+  background: url(../img/xia.png);
+  background-size: cover;
+  margin-top: 0.2rem;
+}
+
+.foot {
+  width: 100%;
+  height: 1rem;
+  font-family: "iconfont";
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.foot div {
+  width: 20%;
+  height: 100%;
+  font-size: 30px;
+  color: #fff;
+  float: left;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.foot div a {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.foot .like a {
+  background: url(../img/xin.png);
+  background-size: cover;
+}
+
+.foot .cycle a {
+  background: url(../img/xunhuan.png);
+  background-size: cover;
+}
+
+.foot .down a {
+  background: url(../img/down.png);
+  background-size: cover;
+}
+
+.foot .share a {
+  background: url(../img/fenxiang1.png);
+  background-size: cover;
+}
+
+.foot .entry a {
+  background: url(../img/liebiao.png);
+  background-size: cover;
+}
+
+.foot .list-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  display: none;
+  background: #1C232C;
+}
+
+.foot .list-box .lists {
+  width: 100%;
+  overflow: hidden;
+}
+
+.foot .list-box .lists li {
+  width: 100%;
+  height: 1rem;
+  border-bottom: 1px solid #282E36;
+  padding: 0 0.4rem;
+}
+
+.foot .list-box .lists li span {
+  font-size: 18px;
+  line-height: 1rem;
+  color: #fff;
+  float: left;
+  margin-right: 10px;
+}
+
+.foot .list-box .lists li .zuozhe {
+  font-size: 12px;
+  color: #7D8086;
+}
+
+.foot .list-box .lists li .delete {
+  float: right;
+  font-size: 20px;
+  color: #6F7379;
+  margin-right: 0;
+}
+
+.foot .list-box .lists li p {
+  float: right;
+  font-size: 20px;
+  color: #50545A;
+  line-height: 1rem;
+  margin-right: 20px;
+}
+
+.foot .list-box .lists li p a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/xin.png);
+  background-size: cover;
+  margin-top: 0.25rem;
+}
+
+.foot .list-box .lists .active span {
+  color: #2EAB70;
+  float: left;
+  margin-right: 10px;
+}
+
+.foot .list-box .lists .active .zuozhe {
+  font-size: 12px;
+  color: #2EAB70;
+}
+
+.foot .list-box .lists .active .delete {
+  float: right;
+  font-size: 20px;
+  color: #6F7379;
+  margin-right: 0;
+}
+
+.foot .list-box .lists .active p {
+  float: right;
+  font-size: 20px;
+  color: #F06A6A;
+  line-height: 1rem;
+  margin-right: 20px;
+}
+
+.foot .list-box .lists .active p a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/xin2.png);
+  background-size: cover;
+  margin-top: 0.25rem;
+}
+
+.foot .list-box .add {
+  width: 100%;
+  height: 1rem;
+  border-bottom: 1px solid #282E36;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1rem;
+}
+
+.foot .list-box .close {
+  width: 100%;
+  height: 1rem;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 1rem;
+}

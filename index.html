@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width'>
+		<meta  name="apple-mobile-web-app-capable" content="yes">
+		<meta  name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta  name="apple-mobile-web-app-title" content="css3">
+		<!---->
+		<meta  name="mobile-web-app-capable" content="yes">
+		<meta  name="application-name" content="black">
+		<meta  name="theme-color" content="#97785C">
+		<link rel="icon" sizes="192*192" href="logo.jpg" />
+		<!---->
+		<link rel="apple-touch-icon" href="logo.jpg" />
+		<title>音乐播放器</title>
+		
+		<script src='js/jquery.js'></script>
+		<script src='js/animate.js'></script>
+		<link rel="stylesheet" href="css/index2.css" />
+		<script src='js/index2.js'></script>
+	</head>
+	<!--controls-->
+	<body>
+		<audio src="mp3/汪苏泷 - 一笑倾城.mp3"  id='audio'></audio>
+		<div class='box'></div>
+		<div class="zhezhao"></div>
+				<!--tou-->
+				<div class='head'>
+					<div class='xiala'><a></a></div>
+					<div class="musicname">
+						<h1 class='name'>一笑倾城</h1>
+						<p class='author'><span>—</span><a>汪苏泷</a><span>—</span></p>
+						<p class='style'><a >标准</a><a >MV</a><a>音效</a></p>
+					</div>
+					<div class='more'></div>
+					<ul class='morebox'>
+						<li class="li">
+							<ul class='box-one'>
+								<li class='box-top'><a></a></li>
+								<li class='about'>加到歌单</li>
+							</ul>
+							<ul class='box-one'>
+								<li class='box-top shengji'><a></a></li>
+								<li class='about'>升级品质</li>
+							</ul>
+							<ul class='box-one'>
+								<li class='box-top fenxiang'><a></a></li>
+								<li class='about'>分享</li>
+							</ul>
+							<ul class='box-one'>
+								<li class='box-top shanchu'><a></a></li>
+								<li class='about'>删除</li>
+							</ul>
+						</li>
+						<li class="li">
+							<ul class='box-one'>
+								<li class='box-top geshou'><a></a></li>
+								<li class='about'>查看歌手</li>
+							</ul>
+							<ul class='box-one'>
+								<li class='box-top zhuanji' ><a></a></li>
+								<li class='about'>查看专辑</li>
+							</ul>
+							<ul class='box-one'>
+								<li class='box-top danqu'><a></a></li>
+								<li class='about'>相似单曲</li>
+							</ul>
+							<ul class='box-one'>
+								<li class='box-top bofang'><a></a></li>
+								<li class='about'>播放MV</li>
+							</ul>
+						</li>
+						<li class="volume">
+							<div class='novolice'>&#xe61b;</div>
+							<div class='volice'>
+								<div class="cir"></div>
+								<div class='volice-duretion'></div>
+							</div>
+						</li>
+						<li class='qx'>取消</li>
+					</ul>
+				</div>
+				<!--tupian-->
+				<div class='pic'></div>
+				<!--lylic-->
+				<div class="lylic">
+					
+				</div>
+				<!--控制台-->
+				<div id='console'>
+					<div class='top'>
+						<div class='time'>0:00</div>
+						<div class='duration'>
+							<div class='circle'></div>
+						</div>
+						<div class='endtime'>3:51</div>
+					</div>
+					<div class='bot'>
+						<div class='prev'><a></a></div>
+						<div class='play'><a></a></div>
+						<div class='next'><a></a></div>
+					</div>
+				</div>
+				<!--foot-->
+				<div class='foot'>
+					<div class="like"><a></a></div>
+					<div class="cycle"><a></a></div>
+					<div class="down"><a></a></div>
+					<div class="share"><a></a></div>
+					<div class="entry"><a></a></div>
+					<div class='list-box'>
+						<ul class='lists'>
+							<li data-v='{"name":"最美的太阳","src":"mp3/张杰、林俊杰 - 最美的太阳(Live).mp3","duration":"4:25"}'></li>
+							<!--<li>
+								<span>一笑倾城</span>
+								<span class='zuozhe'> -汪苏泷</span>
+								<span class="delete">×</span>
+								<p><a></a></p>
+							<!--</li>-->
+						</ul>
+						<div class='add'>+ 添加歌曲到队列</div>
+						<div class='close'>关闭</div>
+					</div>
+				</div>
+			
+	</body>
+</html>

@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+$screen-size:320px,375px,360px,412px,414px,768px;
+html{
+    font-size: 100px;
+}
+body{
+    font-size: 16px;
+}
+$design-size:750px;
+@each $w in $screen-size{
+    @media screen and (min-width:#{$w}){
+        html{
+            font-size: 100px * $w/$design-size;
+        }
+    }
+}
