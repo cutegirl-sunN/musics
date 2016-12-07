@@ -19,7 +19,8 @@ $(function(){
 	var novolice=$(".novolice");
 	var volice=$(".volice");
 	var cir=$(".cir");
-	var vi=$(".volice-duretion")
+	var bj = cir.width() / 2 //半径
+	// var vi=$(".volice-duretion")
 	var musics=[
 	{
 		name:"一笑倾城",
@@ -40,14 +41,14 @@ $(function(){
 		author:"庄心妍",
 		src:"mp3/庄心妍 - 当蝴离开了蝶.mp3",
 		duration:"4:19",
-		img: 'img/2.jpg'
+		img: 'img/6.jpg'
 	},
 	{
 		name:"爱情不是偶像剧",
 		author:"格子兮",
 		src:"mp3/格子兮 - 爱情不是偶像剧.mp3",
 		duration:"3:12",
-		img: 'img/2.jpg'
+		img: 'img/7.jpg'
 	},
 	{
 		name:"爱让我勇敢",
@@ -58,7 +59,7 @@ $(function(){
 	}
 	]
 	audio.oncanplay = function(){
-		time.html(format(audio.duration))
+		endtime.html(format(audio.duration))
 	}
 	//播放暂停事件
 	play.on("touchend",function(){
@@ -79,7 +80,7 @@ $(function(){
 		return m+":"+s;
 	}
 	//时间进程
-	$audio.on("timeupdate",function(){
+	$(audio).on("timeupdate",function(){
 		time.html(format(audio.currentTime));
 		endtime.html(format(audio.duration));
 		var left=duration.width()*audio.currentTime/audio.duration;
@@ -107,6 +108,8 @@ $(function(){
 		audio.src=musics[currentIndex].src;
 		$(".musicname .name").html(musics[currentIndex].name)
 		$(".musicname .author").find("a").html(musics[currentIndex].author)
+		$(".box").css({background:"url("+musics[currentIndex].img+")0% 0% /cover","background-size":"center"})
+		$(".pic").css({background:"url("+musics[currentIndex].img+")","background-size":"cover"})
 		audio.play();
 		play.html("&#xe61f;").css("font-size","48px")
 	})
@@ -140,20 +143,20 @@ $(function(){
 	//音量
 	
 	$audio.on("volumechange",function(){
-		cir.css("left",vi.width()*audio.volum-cir.width()/2)
+		cir.css("left",volice.width()*audio.volum-bj)
 	})
 	cir.on("touchend",false);
-	vi.on("touchend",function(e){
-		audio.volume=(e.originalEvent.changedTouches[0].clientX-vi.offset().left)/vi.width()
-		stopvo.removeAttr('data-v')
+	volice.on("touchend",function(e){
+		audio.volume=(e.originalEvent.changedTouches[0].clientX - volice.offset().left) / volice.width()
+		novolice.removeAttr('data-v')
 	})
 	cir.on("touchend",false);
 	cir.on("touchend",function(e){
 		var r=cir.width()/2;
 		var start=r-e.originalEvent.changedTouches[0].clientX+cir.offset().left
 		$(document).on("touchend",function(e){
-			var left=e.originalEvent.changedTouches[0].clientX-vi.offset().left+start
-			var c=left/vi.width()
+			var left=e.originalEvent.changedTouches[0].clientX-volice.offset().left+start
+			var c=left/volice.width()
 			if(c>1||c<0){
 				return;
 			}
@@ -216,7 +219,8 @@ $(function(){
 		audio.src=musics[currentIndex].src
 		$(".musicname .name").html(musics[currentIndex].name)
 		$(".musicname .author").find("a").html(musics[currentIndex].author)
-		$(".pic").css("background","url(musics[currentIndex].img)")
+		$(".box").css({background:"url("+musics[currentIndex].img+")0% 0% /cover","background-size":"center"})
+		$(".pic").css({background:"url("+musics[currentIndex].img+")","background-size":"cover"})
 		audio.play();
 		$(".play a").css({"width":"50px","height":"50px","background":"url(img/zan.png","background-size":"cover","margin-top":"0.15rem"});
 		
@@ -230,6 +234,8 @@ $(function(){
 		audio.src=musics[currentIndex].src;
 		$(".musicname .name").html(musics[currentIndex].name)
 		$(".musicname .author").find("a").html(musics[currentIndex].author)
+		$(".box").css({background:"url("+musics[currentIndex].img+")0% 0% /cover","background-size":"center"})
+		$(".pic").css({background:"url("+musics[currentIndex].img+")","background-size":"cover"})
 		audio.play();
 		$(".play a").css({"width":"50px","height":"50px","background":"url(img/zan.png","background-size":"cover","margin-top":"0.15rem"});
 	})
@@ -244,4 +250,26 @@ $(function(){
 	$audio.on("ended",function(){
 		audio.play();
 	})
+
+	// 开始时间
+	$(audio).on('loadstart', function() {
+		time.html(format(audio.currentTime))
+
+	})
+
+	// 自动播放下一首
+	$audio.on("ended",function(){
+		currentIndex+=1;
+		if(currentIndex===musics.length){
+			currentIndex=0;
+		}
+		audio.src=musics[currentIndex].src
+		$(".musicname .name").html(musics[currentIndex].name)
+		$(".musicname .author").find("a").html(musics[currentIndex].author)
+		$(".box").css({background:"url("+musics[currentIndex].img+")0% 0% /cover","background-size":"center"})
+		$(".pic").css({background:"url("+musics[currentIndex].img+")","background-size":"cover"})
+		audio.play();
+		$(".play a").css({"width":"50px","height":"50px","background":"url(img/zan.png","background-size":"cover","margin-top":"0.15rem"});
+	})
+
 })
